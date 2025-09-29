@@ -33,6 +33,7 @@ app.whenReady().then(() => {
   console.log('app is ready 平台：' + process.platform);
   console.log('NODE_ENV：' + process.env.NODE_ENV);
   console.log('CERTIFICATE_PASSWORD：' + process.env.CERTIFICATE_PASSWORD);
+  console.log('GITHUB_TOKEN：' + process.env.GITHUB_TOKEN);
   // On OS X it's common to re-create a window in the app when the
   // dock icon is clicked and there are no other windows open.
   app.on('activate', () => {
