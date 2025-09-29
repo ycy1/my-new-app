@@ -61,12 +61,13 @@ module.exports = {
     {
       name: '@electron-forge/publisher-github',
       config: {
+        authToken: process.env.GITHUB_TOKEN,
         repository: {
-          owner: 'github-user-name',
-          name: 'github-repo-name'
+          owner: 'ycy1',
+          name: 'my-new-app'
         },
         prerelease: false,
-        draft: true
+        draft: false
       }
     }
   ]

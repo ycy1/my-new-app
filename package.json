@@ -8,17 +8,18 @@
     "start": "chcp 65001 && set NODE_ENV=development&& electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "publish": "set NODE_TLS_REJECT_UNAUTHORIZED=0&& electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
   "author": {
     "name": "xiexiaojun",
-    "email": "xxj@1579"
+    "email": "2039916844@qq.com"
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "update-electron-app": "^3.1.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.9.0",
@@ -30,6 +31,7 @@
     "@electron-forge/plugin-fuses": "^7.9.0",
     "@electron-forge/publisher-github": "^7.9.0",
     "@electron/fuses": "^1.8.0",
+    "@octokit/rest": "^22.0.0",
     "dotenv": "^17.2.2",
     "electron": "^38.1.2"
   }
