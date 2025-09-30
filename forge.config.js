@@ -22,7 +22,7 @@ module.exports = {
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        certificateFile: './cert.pfx',
+        certificateFile: './sign/cert.pfx',
         certificatePassword: process.env.CERTIFICATE_PASSWORD
       }
     },

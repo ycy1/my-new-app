@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# 替换package.json中的GitHub令牌
+git filter-branch --tree-filter 'if [ -f remove-token.sh.bak ]; then
+  sed -i "s/查询的字符&& //g" 替换的字符
+fi' -- --all
+
+# 清理临时文件
+git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+
+echo "GitHub令牌已从历史提交中移除。请运行 'git push --force' 强制推送清理后的历史。"

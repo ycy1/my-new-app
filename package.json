@@ -1,8 +1,12 @@
 {
   "name": "my-new-app",
   "productName": "my-new-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "My Electron application description",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ycy1/my-new-app.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "start": "chcp 65001 && set NODE_ENV=development&& electron-forge start",
