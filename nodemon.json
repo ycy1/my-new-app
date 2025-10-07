@@ -1,0 +1,22 @@
+{
+    "watch": [
+        "main.js",
+        "src/**/*.{html,css,js}"
+    ],
+    "ext": "html,css,js",
+    "restartable": "rs",
+    "ignore": [
+        "node_modules",
+        "out",
+        ".git",
+        "*.log"
+    ],
+    "delay": "2000",
+    "verbose": true,
+    "execMap": {
+        "js": "node --trace-warnings"
+    },
+    "events": {
+        "restart": "echo '应用程序已重新启动 due to file changes'"
+    }
+}

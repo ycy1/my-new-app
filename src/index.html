@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> <!-- 禁用内联脚本 -->
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> <!-- 禁用内联脚本 -->
   <title>Hello World!</title>
   <link rel="stylesheet" href="index.css" />
+
 </head>
 
 <body>
   <h1>💖 Hello World!</h1>
   <p>Welcome to your Electron application.</p>
+  <p id="info"></p>
+  <p>666</p>
+  <button type="button" id="btn">Open a File</button> File path: <strong id="filePath"></strong>
+  <p>Current value: <strong id="counter">0</strong></p>
 </body>
-
+<script src="renderer.js"></script>
+<!-- <script>
+  // 自 Electron 12 以来，默认情况下已启用上下文隔离，并且它是 _所有应用程序_推荐的安全设置。
+  // 上下文隔离确保渲染器进程的 JavaScript 代码无法访问主进程的 API，从而防止恶意代码利用 Electron 应用程序的漏洞。
+</script> -->
 </html>

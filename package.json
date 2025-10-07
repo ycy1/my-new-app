@@ -7,9 +7,10 @@
     "type": "git",
     "url": "https://github.com/ycy1/my-new-app.git"
   },
-  "main": "src/index.js",
+  "main": "main.js",
   "scripts": {
-    "start": "chcp 65001 && set NODE_ENV=development&& electron-forge start",
+    "start": "chcp 65001 && set NODE_ENV=development && electron .",
+    "dev": "nodemon --exec \"chcp 65001 && set NODE_ENV=development && electron .\"",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "set NODE_TLS_REJECT_UNAUTHORIZED=0&& electron-forge publish",
@@ -37,6 +38,8 @@
     "@electron/fuses": "^1.8.0",
     "@octokit/rest": "^22.0.0",
     "dotenv": "^17.2.2",
-    "electron": "^38.1.2"
+    "electron": "^38.1.2",
+    "electron-reload": "^2.0.0-alpha.1",
+    "nodemon": "^3.1.10"
   }
 }
